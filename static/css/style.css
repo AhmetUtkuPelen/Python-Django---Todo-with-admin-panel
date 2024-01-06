@@ -1,0 +1,4 @@
+.mouse:hover li {
+    background-color: lightgray !important;
+    color: #333 !important;
+}

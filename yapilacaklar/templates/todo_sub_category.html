@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ sub_category.name }} {% endblock title %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-12 w-50">
+        <h2> {{ sub_category.name }} ToDos:</h2>
+
+        <ul class="list-group">
+            {% for todo in todos %}
+
+                <a href="{% url "todo_detail_page" todo.slug %}" class="text-decoration-none mt-2 rounded-2 mouse">
+                    <li class="list-group-item">{{ todo.title }}</li>
+                </a>
+            
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
+
+
+{% endblock content %}

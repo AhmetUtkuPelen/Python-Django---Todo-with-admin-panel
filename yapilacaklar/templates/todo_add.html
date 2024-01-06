@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Todo Create{% endblock title %}
+
+{% block content %}
+
+<form method="POST" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form }}
+
+    <input type="submit" value="Create" class="btn btn-primary w-100 mt-2">
+</form>
+
+
+{% endblock content %}
